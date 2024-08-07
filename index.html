@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="./assets/Logo.png" alt="Logo" class="logo">
+            <textarea id="input-text" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="note">Solo letras minúsculas y sin acentos</div>
+            <div class="buttons">
+                <button id="encrypt-button">Encriptar</button>
+                <button id="decrypt-button">Desencriptar</button>
+            </div>
+        </div>
+        <div class="right-section">
+            <img src="./assets/Muñeco.png" alt="Imagen de buscador" class="side-image">
+            <div class="message">Ningún mensaje fue encontrado</div>
+            <div class="instructions">Ingresa el texto que desees encriptar o desencriptar.</div>
+            <textarea id="output-text" placeholder="Resultado" readonly></textarea>
+            <button id="copy-button">Copiar</button>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <p>Desarrollado por Paola Ortega Balderas</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

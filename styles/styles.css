@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F6F5F2;
+    color: #0A3871;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */ 
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+.left-section, .right-section {
+    padding: 20px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    background-color: #F6F5F2;
+}
+
+.right-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFEFEF;
+}
+
+.logo {
+    position: absolute; /* Posiciona el logo en relación al contenedor .header */
+    top: 0; /* Alinea al borde superior del contenedor */
+    left: 0; /* Alinea al borde izquierdo del contenedor */
+    width: 150px;
+    height: 38px;
+    margin:25px 10px 30px 10px;
+    
+    
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #0A3871; 
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #0A3871;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#encrypt-button {
+    background-color: #F3D0D7;
+    color: white;
+}
+
+#decrypt-button {
+    background-color: white;
+    color: #333;
+    border: 2px solid #0A3871;
+}
+
+#copy-button {
+    background-color: #F3D0D7;
+    color: white;
+    padding: 5px 10px;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.side-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.instructions {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+textarea[readonly] {
+    height: 80px;
+}
+
+.site-footer {
+    background-color: #f8f9fa; /* Fondo claro */
+    text-align: center; /* Centrar el texto */
+    padding: 10px; /* Espaciado interno */
+    position: fixed; /* Fijar al fondo */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Sombra para darle un efecto flotante */
+}
+
+.site-footer p {
+    margin: 4px 0; /* Espacio entre párrafos */
+    color: #0A3871; /* Color del texto */
+}
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    .logo {
+        width: 7.5rem; /* 120px */
+        height: 1.875rem; /* 30px */
+        margin: 1.25rem 0.625rem; /* 20px 10px */
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 0.625rem; /* 10px */
+    }
+}
