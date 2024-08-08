@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #F6F5F2;
@@ -13,38 +18,46 @@ body {
 
 .container {
     display: flex;
-    background-color: white;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */ 
-    border-radius: 10px;
     overflow: hidden;
     max-width: 1000px;
+    height: 90vh; 
+
 }
 
 .left-section, .right-section {
-    padding: 20px;
+    padding: 20px, 20px;
 }
 
 .left-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 60%;
     background-color: #F6F5F2;
+    justify-content: center;
+}
+
+.output-text:focus,
+.output-text:active{
+    border: none;
+    outline: none;
 }
 
 .right-section {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #FFEFEF;
+    height: 90%;
+    
 }
 
 .logo {
-    position: absolute; /* Posiciona el logo en relación al contenedor .header */
-    top: 0; /* Alinea al borde superior del contenedor */
-    left: 0; /* Alinea al borde izquierdo del contenedor */
+    position: absolute; 
+    top: 0; 
+    left: 0; 
     width: 150px;
     height: 38px;
     margin:25px 10px 30px 10px;
@@ -57,10 +70,11 @@ textarea {
     height: 100px;
     padding: 20px;
     margin: 20px 0;
-    border: 2px solid #0A3871; 
+    border: none; 
     border-radius: 5px;
     font-size: 1rem;
     color: #0A3871;
+    background-color: #F6F5F2;
 }
 
 .buttons {
@@ -124,24 +138,25 @@ textarea[readonly] {
 }
 
 .site-footer {
-    background-color: #f8f9fa; /* Fondo claro */
-    text-align: center; /* Centrar el texto */
-    padding: 10px; /* Espaciado interno */
-    position: fixed; /* Fijar al fondo */
+    background-color: #f8f9fa; 
+    text-align: center; 
+    padding: 10px; 
+    position: fixed; 
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Sombra para darle un efecto flotante */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
 }
 
 .site-footer p {
-    margin: 4px 0; /* Espacio entre párrafos */
-    color: #0A3871; /* Color del texto */
+    margin: 4px 0; 
+    color: #0A3871; 
 }
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .container {
         flex-direction: column;
-        max-width: 100%;
+        display: flex;
+        width: auto;
     }
 
     .left-section, .right-section {
@@ -155,16 +170,25 @@ textarea[readonly] {
     }
 
     textarea {
-        width: 90%;
+        width: 100%;
+        top: 5%;
+    }
+
+    .right-section img{
+        top: 0%
     }
 
     .buttons {
+        width: 80%;
+        left: 10%;
+        top: 70%;
         flex-direction: column;
-        align-items: center;
     }
 
-    button {
-        width: 100%;
-        margin-bottom: 0.625rem; /* 10px */
+    .encrypt-button,
+    .decrypt-button{
+        width: 48%;
+        border-radius: 16px;
     }
 }
+  
