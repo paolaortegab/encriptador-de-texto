@@ -15,4 +15,5 @@ Este es un encriptador de texto simple que permite encriptar y desencriptar mens
 -Javascript
 -CSS
 
-
+## Licencia
+Este proyecto está licenciado bajo la Licencia MIT
